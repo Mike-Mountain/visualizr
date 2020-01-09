@@ -1,0 +1,35 @@
+@import "../../../styles/variables/variables";
+
+.file {
+  justify-content: center !important;
+}
+
+.file-label {
+  flex-direction: column !important;
+}
+
+.file-label:hover .file-cta {
+  color: $light;
+  background-color: $info;;
+}
+
+.file-cta {
+  color: $light;
+  border-radius: 4px 4px 0 0 !important;
+  background-color: $primary;
+  transition: background-color .2s ease;
+  &:hover {
+    color: $light;
+    background-color: $info;
+  }
+}
+
+.file-name {
+  border: 1px solid $light !important;
+  border-radius: 0 !important;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}

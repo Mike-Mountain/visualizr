@@ -1,1 +1,25 @@
-<p>file-upload works!</p>
+<div class="header w-35 mx-auto">
+  <h4 class="is-size-4">Upload a file</h4>
+  <button [disabled]="!file" class="button is-small is-outlined-danger" (click)="removeFile()">Remove</button>
+</div>
+<div class="card has-background-grey-dark w-45 mx-auto mt-2">
+  <div class="card-content">
+    <div class="file has-name is-fullwidth is-small">
+      <label class="file-label">
+        <input class="file-input" (change)="fileChange($event)" type="file" name="chatText">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            Choose a file…
+          </span>
+        </span>
+        <span class="file-name has-text-light has-text-centered">
+          {{file?.name || 'No File Chosen'}}
+        </span>
+      </label>
+    </div>
+    <!--    <progress class="progress is-small is-primary mt-3 w-75 mx-auto" value="15" max="100">15%</progress>-->
+  </div>
+</div>
